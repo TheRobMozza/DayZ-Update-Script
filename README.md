@@ -6,6 +6,7 @@ All well and good having a self hosted DayZ server.. BUT we need to address the 
 To sucessfully automate your self hosted DayZ server you will need firstly, to set your Windows to log in automatically. This can be achieved in several ways listed here;
 
 Windows 10 - https://windowsreport.com/auto-login-windows-10/
+
 Windows 11 - https://windowsreport.com/windows-11-auto-login/
 
 Once your Windows is auto logged in, I suggest for you to right click on your Start-DayZ-Server batchfile and click 'Send To' then Desktop (Create shortcut) and then drag you're newly created shortcut into your Start Folder. This way if you get an 'urgent' Windows update, that restarts your server, at least your DayZ server will come back up after Windows reboots.
