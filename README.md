@@ -14,7 +14,7 @@ Once your Windows is auto logged in, I suggest for you to right click on your St
 
 ## Updates
 
-There are many 'DayZ automatic update scripts' here on GitHub and I started using one, modifying it to suit my own needs. Customising it and yes it worked for a short amount of time. Something then must of changed in DayZ, as unfortunately it then just stopped updating. So I've trialed and errored my own variant, which is working 13/01/2023 and hopefully for a fair amount of time going forward as well!
+There are many 'DayZ automatic update scripts' here on GitHub and I started using one, modifying it to suit my own needs. Customising it and yes it worked for a short amount of time. Something then must of changed in DayZ, as unfortunately it then just stopped updating. So I've trial'ed and error'ed my own variant, which is working 13/01/2023 and hopefully for a fair amount of time going forward as well!
 
 
 ## Editing the Start-Day-Server.bat
