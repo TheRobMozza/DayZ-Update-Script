@@ -22,6 +22,7 @@ There are many 'DayZ automatic update scripts' here on GitHub and I started usin
 As per the instructions in the file, there are a number of prerequisites. 
 
 (i) Making copies of your important files.
+
 (ii) Adding your own server details (in the lined section)
 
 Once completed you should have a sucessfully updating DayZ batchfile. Feel free to modify/alter to suit you're own requirments.
