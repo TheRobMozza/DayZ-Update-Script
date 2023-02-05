@@ -1,7 +1,7 @@
 @echo off
 TITLE DayZ SA Server - Status
     :: _______________________________________________________________
-    SET SteamLogin=YOUR_STEAM_USERNAME YOUR_STEAM_PASSWORD                 <<-- EDIT (Then remove ALL of these edit texts)
+    SET SteamLogin=YOUR_STEAM_USERNAME YOUR_STEAM_PASSWORD                     <<-- EDIT (Then remove ALL of these edit texts)
     SET DayZBranch=223350
     SET DayZServerPath="C:\SteamCMD\SERVER\DayZ"		    		<<-- EDIT (Location of your SteamCMD DayZ installation)
     SET SteamCMDPath="C:\SteamCMD"			        	    	<<-- EDIT (Location of your SteamCMD installation)
