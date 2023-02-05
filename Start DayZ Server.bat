@@ -26,6 +26,8 @@ echo Server is not running, taking care of it..
 GOTO killServer
 
 :loopServer
+:: *** CHANGE THE 30 BELOW TO ALTER THE DELAY IN CHECKING IF THE SERVER IS STILL RUNNING ***
+:: *****************************************************************************************
 FOR /L %%s IN (30,-1,0) DO (
     echo Server is running. Checking again in %%s seconds.. 
     timeout 1 >nul
@@ -35,6 +37,7 @@ GOTO checkServer
 :killServer
 taskkill /f /im DayZServer_x64.exe
 ::taskkill /im bec.exe								<<-- Commented out, uncomment and remove this statement if using BEC
+::taskkill /im dzsalauncher.exe                     <<-- Same (Uncomment) if you are running the DayZ SA launcher
 GOTO updateServer
 
 :updateServer
