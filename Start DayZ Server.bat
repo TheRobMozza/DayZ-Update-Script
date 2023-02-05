@@ -10,7 +10,7 @@ TITLE DayZ SA Server - Status
     SET DayZModList=(C:\SteamCMD\SERVER\DayZ\Modlist.txt)			<<-- EDIT (Location of your Modlist file, NOTE brackets INSTEAD of speechmarks on this)
     SET SteamCMDWorkshopPath="C:\SteamCMD\steamapps\workshop\content\221100"
     SET SteamCMDDelay=5
-    :: SETlocal EnableDelayedExpansion                          <<-- EDIT (This line is not need unless you'are running DayZ Expansion)
+    :: SETlocal EnableDelayedExpansion                                      <<-- EDIT (This line is not need unless you'are running DayZ Expansion)
     :: _______________________________________________________________
 GOTO checkServer
 
