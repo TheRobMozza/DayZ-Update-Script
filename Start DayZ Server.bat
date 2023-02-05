@@ -4,7 +4,7 @@ TITLE DayZ SA Server - Status
     SET SteamLogin=YOUR_STEAM_USERNAME YOUR_STEAM_PASSWORD          <<-- EDIT (Then remove ALL of these edit texts)
     SET DayZBranch=223350
     SET DayZServerPath="C:\SteamCMD\SERVER\DayZ"		    		<<-- EDIT (Location of your SteamCMD DayZ installation)
-    SET SteamCMDPath="C:\SteamCMD"			        	    		<<-- EDIT (Location of your SteamCMD installation)
+    SET SteamCMDPath="C:\SteamCMD"			        	    	<<-- EDIT (Location of your SteamCMD installation)
     SET BECPath="C:\SteamCMD\SERVER\DayZ\BEC"			    		<<-- EDIT (Location of your BEC (if used? I do not))
     SET SteamWorkshopFolder=C:\SteamCMD\steamapps\workshop			<<-- EDIT (Location of your Steam Workshop Folder - NOTE: No speechmarks on THIS item..)
     SET DayZModList=(C:\SteamCMD\SERVER\DayZ\Modlist.txt)			<<-- EDIT (Location of your Modlist file, NOTE brackets INSTEAD of speechmarks on this)
