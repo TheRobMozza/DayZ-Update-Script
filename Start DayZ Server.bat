@@ -37,7 +37,7 @@ GOTO checkServer
 :killServer
 taskkill /f /im DayZServer_x64.exe
 ::taskkill /im bec.exe								<<-- Commented out, uncomment and remove this statement if using BEC
-::taskkill /im dzsalauncher.exe                                                  <<-- Same (Uncomment) if you are running the DayZ SA launcher
+::taskkill /im dzsalauncher.exe                                                 <<-- Same (Uncomment) if you are running the DayZ SA launcher
 GOTO updateServer
 
 :updateServer
