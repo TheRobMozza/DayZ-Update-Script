@@ -1,7 +1,7 @@
 @echo off
 TITLE DayZ SA Server - Status
     :: _______________________________________________________________
-    SET SteamLogin=YOUR_STEAM_USERNAME YOUR_STEAM_PASSWORD                     <<-- EDIT (Then remove ALL of these edit texts)
+    SET SteamLogin=YOUR_STEAM_USERNAME YOUR_STEAM_PASSWORD                       <<-- EDIT (Then remove ALL of these edit texts)
     SET DayZBranch=223350
     SET DayZServerPath="C:\SteamCMD\SERVER\DayZ"		    		<<-- EDIT (Location of your SteamCMD DayZ installation)
     SET SteamCMDPath="C:\SteamCMD"			        	    	<<-- EDIT (Location of your SteamCMD installation)
@@ -10,7 +10,7 @@ TITLE DayZ SA Server - Status
     SET DayZModList=(C:\SteamCMD\SERVER\DayZ\Modlist.txt)			<<-- EDIT (Location of your Modlist file, NOTE brackets INSTEAD of speechmarks on this)
     SET SteamCMDWorkshopPath="C:\SteamCMD\steamapps\workshop\content\221100"
     SET SteamCMDDelay=5
-    :: SETlocal EnableDelayedExpansion					            <<-- EDIT (This line is not need unless you'are running DayZ Expansion)
+    :: SETlocal EnableDelayedExpansion					               <<-- EDIT (This line is not need unless you'are running DayZ Expansion)
     :: _______________________________________________________________
 GOTO checkServer
 
