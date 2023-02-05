@@ -99,8 +99,8 @@ echo Starting DayZ SA Server in 1...
 cd "%DayZServerPath%"
 time /T
 :: *********************************************************************************************************************************************************
-::										vv-- You will DEFINATELY need to ammend the below start DayZ server settings
-:::                                           Port number will probably be the same however mods definately will not be the same
+::								vv-- You will DEFINATELY need to ammend the below start DayZ server settings
+::                                           Port number will probably be the same however mods definately will not be the same
 ::
 DayZServer_x64.exe -config=serverDZ.cfg -port=2302 --dologs -adminlog -netlog -freezecheck -profiles=C:\SteamCMD\SERVER\DayZ\DayZServerprofiles "-mod=@CF;@VPPAdminTools;@DayZ-Expansion-Licensed;@DayZ-Expansion-Core;@DayZ-Expansion-Vehicles;@Dabs Framework;@Sleeping Pills (Diazepam);@DayZ-Expansion-Animations;@RedFalcon Mosquito Mk III;@BoomLay's Things"
 :: *********************************************************************************************************************************************************
