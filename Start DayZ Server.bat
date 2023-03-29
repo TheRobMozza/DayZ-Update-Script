@@ -66,13 +66,27 @@ echo.
 echo Updating DayZ SA Server in 1...
 cd "%SteamCMDPath%"
 steamcmd.exe +force_install_dir %DayZServerPath% +quit
-steamcmd.exe +login %SteamLogin% +"app_update %DayZBranch%" +quit
+steamcmd.exe +login %SteamLogin% +app_update "%DayZBranch%" +quit
 GOTO updateMods
 
 :startServer
-:: *** MAKES BACKUP FILES ***
-:: **************************
+echo.
+echo.
+echo *****************************************
+echo **                                     **
+echo ** BACKUP CORE FILES? (Default is YES) **
+echo **                                     **
+echo *****************************************
+echo.
+choice /C YN /T 5 /D Y
+echo.
+IF "%ERRORLEVEL%" == "2" GOTO overwriteFilesPrompt
+IF "%ERRORLEVEL%" == "1" GOTO backupOrigFiles
+GOTO startServer
+
+:backupOrigFiles
 xcopy %DayZServerPath%\serverDZ.cfg %DayZServerPath%\serverDZ.trm /y
+:: *.trm = (T)he(R)ob(M)ozza, just for info!
 xcopy %DayZServerPath%\mpmissions\dayzOffline.chernarusplus\cfgeventspawns.xml %DayZServerPath%\mpmissions\dayzOffline.chernarusplus\cfgeventspawns.trm /y
 xcopy %DayZServerPath%\mpmissions\dayzOffline.chernarusplus\cfgspawnabletypes.xml %DayZServerPath%\mpmissions\dayzOffline.chernarusplus\cfgspawnabletypes.trm /y
 xcopy %DayZServerPath%\mpmissions\dayzOffline.chernarusplus\cfggameplay.json %DayZServerPath%\mpmissions\dayzOffline.chernarusplus\cfggameplay.trm /y
@@ -87,6 +101,38 @@ xcopy %DayZServerPath%\mpmissions\dayzOffline.chernarusplus\db\types.xml %DayZSe
 :: xcopy %DayZServerPath%\mpmissions\dayzOffline.chernarusplus\expansion_ce\expansion_events.xml %DayZServerPath%\mpmissions\dayzOffline.chernarusplus\expansion_ce\expansion_events.trm /y
 :: xcopy %DayZServerPath%\mpmissions\dayzOffline.chernarusplus\expansion_ce\expansion_spawnabletypes.xml %DayZServerPath%\mpmissions\dayzOffline.chernarusplus\expansion_ce\expansion_spawnabletypes.trm /y
 :: xcopy %DayZServerPath%\mpmissions\dayzOffline.chernarusplus\expansion_ce\expansion_types.xml %DayZServerPath%\mpmissions\dayzOffline.chernarusplus\expansion_ce\expansion_types.trm /y
+GOTO overwriteFilesPrompt
+
+:overwriteFilesPrompt
+echo.
+echo.
+echo *******************************************
+echo **                                       **
+echo ** OVERWRITE CORE FILES? (Default is NO) **
+echo **                                       **
+echo *******************************************
+echo.
+choice /C YN /T 5 /D N
+echo.
+IF "%ERRORLEVEL%" == "2" GOTO loadServer
+IF "%ERRORLEVEL%" == "1" GOTO overwriteFiles
+GOTO startServer
+
+:overwriteFiles
+:backupFiles
+xcopy C:\SteamCMD\SERVER\DayZ\serverDZ.trm C:\SteamCMD\SERVER\DayZ\serverDZ.cfg /y
+xcopy C:\SteamCMD\SERVER\DayZ\mpmissions\dayzOffline.chernarusplus\cfgeventspawns.trm C:\SteamCMD\SERVER\DayZ\mpmissions\dayzOffline.chernarusplus\cfgeventspawns.xml /y
+xcopy C:\SteamCMD\SERVER\DayZ\mpmissions\dayzOffline.chernarusplus\cfgspawnabletypes.trm C:\SteamCMD\SERVER\DayZ\mpmissions\dayzOffline.chernarusplus\cfgspawnabletypes.xml /y
+xcopy C:\SteamCMD\SERVER\DayZ\mpmissions\dayzOffline.chernarusplus\cfggameplay.trm C:\SteamCMD\SERVER\DayZ\mpmissions\dayzOffline.chernarusplus\cfggameplay.json /y
+xcopy C:\SteamCMD\SERVER\DayZ\mpmissions\dayzOffline.chernarusplus\mapgroupproto.trm C:\SteamCMD\SERVER\DayZ\mpmissions\dayzOffline.chernarusplus\mapgroupproto.xml /y
+xcopy C:\SteamCMD\SERVER\DayZ\mpmissions\dayzOffline.chernarusplus\db\events.trm C:\SteamCMD\SERVER\DayZ\mpmissions\dayzOffline.chernarusplus\db\events.xml /y
+xcopy C:\SteamCMD\SERVER\DayZ\mpmissions\dayzOffline.chernarusplus\db\messages.trm C:\SteamCMD\SERVER\DayZ\mpmissions\dayzOffline.chernarusplus\db\messages.xml /y
+xcopy C:\SteamCMD\SERVER\DayZ\mpmissions\dayzOffline.chernarusplus\db\types.trm C:\SteamCMD\SERVER\DayZ\mpmissions\dayzOffline.chernarusplus\db\types.xml /y
+xcopy C:\SteamCMD\SERVER\DayZ\mpmissions\dayzOffline.chernarusplus\cfgeconomycore.trm C:\SteamCMD\SERVER\DayZ\mpmissions\dayzOffline.chernarusplus\cfgeconomycore.xml /y
+xcopy C:\SteamCMD\SERVER\DayZ\mpmissions\dayzOffline.chernarusplus\cfgeventspawns.trm C:\SteamCMD\SERVER\DayZ\mpmissions\dayzOffline.chernarusplus\cfgeventspawns.xml /y
+GOTO loadServer
+
+:loadServer
 echo.
 echo.
 echo Starting DayZ SA Server in 3.
