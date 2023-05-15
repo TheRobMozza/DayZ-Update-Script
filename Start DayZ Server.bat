@@ -1,4 +1,8 @@
 @echo off
+::
+:: DayZ Server Start Automated Batch File
+:: By TheRobMozza - https://github.com/TheRobMozza/
+::
 TITLE DayZ SA Server - Status
     :: _______________________________________________________________
     SET SteamLogin=YOUR_STEAM_USERNAME YOUR_STEAM_PASSWORD                      <<-- EDIT (Then remove ALL of these edit texts)
